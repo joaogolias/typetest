@@ -1,0 +1,61 @@
+
+Usuário 1:
+    NOME: Aldomar Pietro Santana Silva
+    EMAIL: aldo_pietro@hotmail.com
+Usuário 2:
+    NOME: Alexandre Teodoro de Siqueira Guedes Alcoforado
+    EMAIL: alealcoforado@gmail.com
+Usuário 3:
+    NOME: Bruno Alves Balula
+    EMAIL: brunobalula98@usp.br
+Usuário 4:
+    NOME: Danilo SIlva Maia
+    EMAIL: danilosmaia10@hotmail.com
+Usuário 5:
+    NOME: Denisson José Panta Oliveira
+    EMAIL: denissonpanta@gmail.com
+Usuário 6:
+    NOME: Eduardo Castilho de Almeida Prado
+    EMAIL: educastilho07@hotmail.com
+Usuário 7:
+    NOME: Eduardo Spera Prates
+    EMAIL: eduardo.spera@usp.br
+Usuário 8:
+    NOME: Felipe Kenzo Shiraishi
+    EMAIL: felhipeshiraishi@gmail.com
+Usuário 9:
+    NOME: Flavia Azeredo
+    EMAIL: flavia.azeredo@gmail.com
+Usuário 10:
+    NOME: Gabriel Augusto Lopes Miranda
+    EMAIL: gabriel_augusto_lopes@usp.br
+Usuário 11:
+    NOME: Gabriel Morghett Gaboardi
+    EMAIL: gabriel.morghett@usp.br
+Usuário 12:
+    NOME: Giovanna Morghett Gaboardi
+    EMAIL: giovanna_morghett@usp.br
+Usuário 13:
+    NOME: Giulia C De Nardi
+    EMAIL: giuliacdenardi@usp.br
+Usuário 14:
+    NOME: Guilherme Migliati de Oliveira
+    EMAIL: gui_migli@usp.br
+Usuário 15:
+    NOME: Helena Vidal Zobaran
+    EMAIL: helenazobaran@usp.br
+Usuário 16:
+    NOME: Henrique Geribello Giabardo
+    EMAIL: henriquegiabardo@usp.br
+Usuário 17:
+    NOME: Henrique Guisasola
+    EMAIL: henrique.appsimples@gmail.com
+Usuário 18:
+    NOME: Isabelle Baida Beccari
+    EMAIL: isabellebccr@usp.br
+Usuário 19:
+    NOME: Leticia Alves Chijo
+    EMAIL: leticia.chijo@gmail.com
+Usuário 20:
+    NOME: Marcos Vinicius Nogueira
+    EMAIL: marcosvinicius.nc@gmail.com

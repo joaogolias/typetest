@@ -1,0 +1,97 @@
+SAMSUNG - REALIDADE VIRTUAL - PARTICIPANTES
+Participante 1:
+    NOME: Aldomar Pietro Santana Silva
+    EMAIL: aldo_pietro@hotmail.com
+    CPF: 459.179.358-31
+Participante 2:
+    NOME: Amália Luiza de Moura Rodrigues Soares 
+    EMAIL: amalia_soares@usp.br
+    CPF: 383.275.138-69
+Participante 3:
+    NOME: William Ryo Takahashi
+    EMAIL: william.ryort@gmail.com
+    CPF: 407.881.878-13
+Participante 4:
+    NOME: Gabriel Morghett Gaboardi
+    EMAIL: gabriel.morghett@usp.br
+    CPF: 461.793.368-90
+Participante 5:
+    NOME: Andrei dos Santos
+    EMAIL: andrei.sgi97@gmail.com
+    CPF: 006.456.282-47
+Participante 6:
+    NOME: Denisson José Panta Oliveira
+    EMAIL: denissonpanta@gmail.com
+    CPF: 076.669.785-10
+Participante 7:
+    NOME: Felipe Kenzo Shiraishi
+    EMAIL: felhipeshiraishi@gmail.com
+    CPF: 029.208.631-85
+Participante 8:
+    NOME: Helder Seiji Tanaka Costa
+    EMAIL: helder.costa@usp.br
+    CPF: 384.095.958-69
+Participante 9:
+    NOME: José Otávio Brochado Colombini
+    EMAIL: josecolombini@usp.br
+    CPF: 464.905.758-25
+Participante 10:
+    NOME: Pedro Henrique Gianjoppe dos Santos 
+    EMAIL: pedrohgian@usp.br
+    CPF: 488.775.888-02
+Participante 11:
+    NOME: Henrique Geribello Giabardo
+    EMAIL: henriquegiabardo@usp.br
+    CPF: 442.946.358-19
+Participante 12:
+    NOME: Fabio Andrade Zagotto 
+    EMAIL: fabio.zagotto@gmail.com
+    CPF: 414.432.128-22
+Participante 13:
+    NOME: Isabela Comegna dos Santos
+    EMAIL: isacomegna@gmail.com
+    CPF: 404.965.738-45
+Participante 14:
+    NOME: nathan menezes da luz
+    EMAIL: nathanluz.poli@usp.br
+    CPF: 322.873.508-70
+Participante 15:
+    NOME: Gleice Soares de Oliveira 
+    EMAIL: gleice115@gmail.com
+    CPF: 423.792.318-50
+Participante 16:
+    NOME: Helena Vidal Zobaran
+    EMAIL: helenazobaran@usp.br
+    CPF: 474.187.068-55
+Participante 17:
+    NOME: Nayara leal dos santos 
+    EMAIL: naahseven@gmail.com
+    CPF: 461.270.538-62
+Participante 18:
+    NOME: Rafael dos Santos Afonso
+    EMAIL: rafael.s.afonso@usp.br
+    CPF: 488.384.338-60
+Participante 19:
+    NOME: Larissa Carrer
+    EMAIL: larissa.carrer@usp.br
+    CPF: 412.799.538-61
+Participante 20:
+    NOME: André Luiz Farão Navarro
+    EMAIL: andrenavarro@usp.br
+    CPF: 392.781.418-01
+Participante 21:
+    NOME: Eduardo Castilho de Almeida Prado
+    EMAIL: educastilho07@hotmail.com
+    CPF: 424.125.908-18
+Participante 22:
+    NOME: Clovis Gaboardi
+    EMAIL: cgaboardi@gmail.com
+    CPF: 408.040.469-72
+Participante 23:
+    NOME: Guilherme Migliati de Oliveira
+    EMAIL: gui_migli@usp.br
+    CPF: 408.878.768-46
+Participante 24:
+    NOME: Megumi Tsuru
+    EMAIL: megtsuru@usp.br
+    CPF: 235.948.918-60

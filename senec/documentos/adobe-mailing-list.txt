@@ -1,0 +1,88 @@
+ADOBE MAILING LIST
+Usuário 1:
+    NOME: Pedro Curcio De Paschoal
+    EMAIL: ppaschoal42@gmail.com
+Usuário 2:
+    NOME: Denisson José Panta Oliveira
+    EMAIL: denissonpanta@gmail.com
+Usuário 3:
+    NOME: Lucas Canossa Cipolla
+    EMAIL: lucascc2000@usp.br
+Usuário 4:
+    NOME: Isabelle Baida Beccari
+    EMAIL: isabellebccr@usp.br
+Usuário 5:
+    NOME: haroldo gomes barroso filho
+    EMAIL: haroldogomes86@gmail.com
+Usuário 6:
+    NOME: Vinícius Henrique Dias Amaral
+    EMAIL: vinihdamaral@usp.br
+Usuário 7:
+    NOME: Vinicius Augusto Carvalhaes Pimenta
+    EMAIL: vinicius.pimenta@usp.br
+Usuário 8:
+    NOME: Maria Luisa Lopes de Faria
+    EMAIL: marialuisaf1903@gmail.com
+Usuário 9:
+    NOME: Andrei dos Santos
+    EMAIL: andrei.sgi97@gmail.com
+Usuário 10:
+    NOME: Ilton Andrew
+    EMAIL: iltonandrew@gmail.com
+Usuário 11:
+    NOME: nathan menezes da luz
+    EMAIL: nathanluz.poli@usp.br
+Usuário 12:
+    NOME: Danilo SIlva Maia
+    EMAIL: danilosmaia10@hotmail.com
+Usuário 13:
+    NOME: Helena Vidal Zobaran
+    EMAIL: helenazobaran@usp.br
+Usuário 14:
+    NOME: Giulia C De Nardi
+    EMAIL: giuliacdenardi@usp.br
+Usuário 15:
+    NOME: Rafael dos Santos Afonso
+    EMAIL: rafael.s.afonso@usp.br
+Usuário 16:
+    NOME: tamires 
+    EMAIL: tamirespascual@usp.br
+Usuário 17:
+    NOME: Beatriz Alves Bessa
+    EMAIL: beatriz.bessa@usp.br
+Usuário 18:
+    NOME: Henrique Geribello Giabardo
+    EMAIL: henriquegiabardo@usp.br
+Usuário 19:
+    NOME: Fernando Nunes Santana
+    EMAIL: fernandon39@gmail.com
+Usuário 20:
+    NOME: YoramKraiser Goldstein
+    EMAIL: yogold@usp.br
+Usuário 21:
+    NOME: João Vitor Vargas Soares
+    EMAIL: joaovitorvargassoares@gmail.com
+Usuário 22:
+    NOME: Nayara leal dos santos 
+    EMAIL: naahseven@gmail.com
+Usuário 23:
+    NOME: André Luiz Farão Navarro
+    EMAIL: andrenavarro@usp.br
+Usuário 24:
+    NOME: Gabriel Augusto Lopes Miranda
+    EMAIL: gabriel_augusto_lopes@usp.br
+Usuário 25:
+    NOME: Giovanna Morghett Gaboardi
+    EMAIL: giovanna_morghett@usp.br
+Usuário 26:
+    NOME: Gustavo Marangoni Rubo
+    EMAIL: gustavorubo@hotmail.com
+Usuário 27:
+    NOME: Thomas Palmeira Ferraz
+    EMAIL: thomas.ferraz@usp.br
+Usuário 28:
+    NOME: Larissa Carrer
+    EMAIL: larissa.carrer@usp.br
+Usuário 29:
+    NOME: Felipe Rocha de Souza Melhado
+    EMAIL: felipermelhado@usp.br

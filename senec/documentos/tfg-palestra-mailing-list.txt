@@ -1,0 +1,379 @@
+APPSIMPLES WEB MAILING LIST
+Usuário 1:
+    NOME: Aldomar Pietro Santana Silva
+    EMAIL: aldo_pietro@hotmail.com
+Usuário 2:
+    NOME: Rodrigo Kanashiro Sonoda
+    EMAIL: digosonoda@usp.br
+Usuário 3:
+    NOME: Isabella de Melo Sousa
+    EMAIL: isabellamsousa@usp.br
+Usuário 4:
+    NOME: César Tzanno de Queiroz
+    EMAIL: cesar.tzq@gmail.com
+Usuário 5:
+    NOME: Isabelle Baida Beccari
+    EMAIL: isabellebccr@usp.br
+Usuário 6:
+    NOME: Lucas Giannella de Oliveira
+    EMAIL: lucasgiannella@usp.br
+Usuário 7:
+    NOME: Juliana Marques da Cruz
+    EMAIL: julianamcruz@usp.br
+Usuário 8:
+    NOME: Marcos Vinicius Nogueira
+    EMAIL: marcosvinicius.nc@gmail.com
+Usuário 9:
+    NOME: Felipe Rocha de Souza Melhado
+    EMAIL: felipermelhado@usp.br
+Usuário 10:
+    NOME: Gabriel Morghett Gaboardi
+    EMAIL: gabriel.morghett@usp.br
+Usuário 11:
+    NOME: Igor Freitas Sym
+    EMAIL: igorsym97@gmail.com
+Usuário 12:
+    NOME: José Vitor Martins Makiyama
+    EMAIL: jv.makiyama@usp.br
+Usuário 13:
+    NOME: Jonathan Pereira Maria
+    EMAIL: jonathan.283@hotmail.com
+Usuário 14:
+    NOME: Jaqueline Cuevas Cortes
+    EMAIL: jaquelinecuevascortes@usp.br
+Usuário 15:
+    NOME: Pedro Henrique Carvalho dos Reis
+    EMAIL: pedroredbox@usp.br
+Usuário 16:
+    NOME: Henrique Uhelszki Yoshida
+    EMAIL: henrique@uhel.com.br
+Usuário 17:
+    NOME: Matheus Ribeiro Lira
+    EMAIL: matheusribeiro10@hotmail.com
+Usuário 18:
+    NOME: GABRIEL BARALDI
+    EMAIL: baraldigabriel@gmail.com
+Usuário 19:
+    NOME: João Marcelo Frezzato Oliveira
+    EMAIL: joao.marcelo.oliveira@usp.br
+Usuário 20:
+    NOME: Alcides Yoshimitsu Shimonishi
+    EMAIL: alcides.shimonishi@usp.br
+Usuário 21:
+    NOME: Lucas Gomes de Paiva
+    EMAIL: lucas.gomes.paiva@usp.br
+Usuário 22:
+    NOME: Lyara Oliveira Alvarenga
+    EMAIL: lyaraoliveira@yahoo.com.br
+Usuário 23:
+    NOME: Gustavo Kimura
+    EMAIL: gustavo_kimura@usp.br
+Usuário 24:
+    NOME: Arthur Pires da Fonseca
+    EMAIL: arthurpfonseca@gmail.com
+Usuário 25:
+    NOME: Andrei dos Santos
+    EMAIL: andrei.sgi97@gmail.com
+Usuário 26:
+    NOME: Amílcar Shogo Imasato
+    EMAIL: shogo.imasato@usp.br
+Usuário 27:
+    NOME: WESLEY PEREIRA DE ALMEIDA
+    EMAIL: wespereira@outlook.com
+Usuário 28:
+    NOME: Lucas Henna Sallaberry
+    EMAIL: lhsallaberry@gmail.com
+Usuário 29:
+    NOME: Alexandre Leschot Frederick
+    EMAIL: frederick_leschot@usp.br
+Usuário 30:
+    NOME: William Ryo Takahashi
+    EMAIL: william.ryort@gmail.com
+Usuário 31:
+    NOME: Airton de Souza Oliveira
+    EMAIL: airtonsoliv@usp.br
+Usuário 32:
+    NOME: Danilo de Sousa Lopes
+    EMAIL: danilo.slopes@usp.br
+Usuário 33:
+    NOME: Carlos Eduardo Santi
+    EMAIL: prof.carlos.santi@gmail.com
+Usuário 34:
+    NOME: Amália Luiza de Moura Rodrigues Soares 
+    EMAIL: amalia_soares@usp.br
+Usuário 35:
+    NOME: Ilton Andrew
+    EMAIL: iltonandrew@gmail.com
+Usuário 36:
+    NOME: William Paixão Moura
+    EMAIL: william.paixao.moura@usp.br
+Usuário 37:
+    NOME: Brunno Munkeviz
+    EMAIL: gallettimunkeviz@gmail.com
+Usuário 38:
+    NOME: Denisson José Panta Oliveira
+    EMAIL: denissonpanta@gmail.com
+Usuário 39:
+    NOME: Felipe Kenzo Shiraishi
+    EMAIL: felhipeshiraishi@gmail.com
+Usuário 40:
+    NOME: William Gabriel Cunegundes Guimarães
+    EMAIL: william.gabriel.guimaraes@usp.br
+Usuário 41:
+    NOME: Bruno Hisashi Otsuka
+    EMAIL: brn.otsuka@gmail.com
+Usuário 42:
+    NOME: ERIC NOZOMI TATSUTA
+    EMAIL: ericnozomi@gmail.com
+Usuário 43:
+    NOME: Danilo SIlva Maia
+    EMAIL: danilosmaia10@hotmail.com
+Usuário 44:
+    NOME: Wellington Moutinho Dias
+    EMAIL: wellingtonmoutinho@usp.br
+Usuário 45:
+    NOME: Marcos Franco 
+    EMAIL: marcos.roberto.filho@usp.br
+Usuário 46:
+    NOME: Bruno Harllen Pontes da Silva
+    EMAIL: brunoharllen@usp.br
+Usuário 47:
+    NOME: Bruno José Móvio
+    EMAIL: brunojmovio@gmail.com
+Usuário 48:
+    NOME: Julia Mendes
+    EMAIL: juliamendes@usp.br
+Usuário 49:
+    NOME: Artur Vieira Ribeiro
+    EMAIL: arturvribeiro1@gmail.com
+Usuário 50:
+    NOME: Bruno Alves Balula
+    EMAIL: brunobalula98@usp.br
+Usuário 51:
+    NOME: Raquel Maywalg Garcia
+    EMAIL: raquel.mgarcia@live.com
+Usuário 52:
+    NOME: felipe igai wang
+    EMAIL: felipewang10@gmail.com
+Usuário 53:
+    NOME: Gustavo Oliveira Barranova
+    EMAIL: gustavo.barranova@usp.br
+Usuário 54:
+    NOME: Breno loscher rocha
+    EMAIL: brenoloscher@gmail.com
+Usuário 55:
+    NOME: Leandro Chacon Tonin
+    EMAIL: leandro.ctonin@gmail.com
+Usuário 56:
+    NOME: Bruno da Costa Braga
+    EMAIL: bruno.costa.braga@usp.br
+Usuário 57:
+    NOME: Fernando Zolubas Preto 
+    EMAIL: zolubas@usp.br
+Usuário 58:
+    NOME: Lucas Antonio Jardim Pontes
+    EMAIL: lucasantoniojp@usp.br
+Usuário 59:
+    NOME: Beatriz Ribeiro Timótheo
+    EMAIL: brtimotheo@gmail.com
+Usuário 60:
+    NOME: Lucas Tolotti
+    EMAIL: lucas_tolotti@hotmail.com
+Usuário 61:
+    NOME: Andre Gotlieb Ballas
+    EMAIL: ballasandre@gmail.com
+Usuário 62:
+    NOME: Antônio Renato crespo
+    EMAIL: systems.wiring@gmail.com
+Usuário 63:
+    NOME: Helder Seiji Tanaka Costa
+    EMAIL: helder.costa@usp.br
+Usuário 64:
+    NOME: Rafael Lopez Barone
+    EMAIL: rafaelbarone.96@gmail.com
+Usuário 65:
+    NOME: FELIPE KENZO KUSAKAWA MASHUDA
+    EMAIL: felipe.kenzo@live.com
+Usuário 66:
+    NOME: Thalita Navarro Tutui
+    EMAIL: thalita.tutui@usp.br
+Usuário 67:
+    NOME: José Otávio Brochado Colombini
+    EMAIL: josecolombini@usp.br
+Usuário 68:
+    NOME: Thais Rosa Rey
+    EMAIL: thaisrrey@gmail.com
+Usuário 69:
+    NOME: Arthur Andrade Ilario
+    EMAIL: ailario@usp.br
+Usuário 70:
+    NOME: Marco Abensur
+    EMAIL: marco.abensur@usp.br
+Usuário 71:
+    NOME: Guilherme Busato Vecchi
+    EMAIL: guilhermebvecchi@hotmail.com
+Usuário 72:
+    NOME: Leonardo Akira Fattore Hirano
+    EMAIL: leohirano95@gmail.com
+Usuário 73:
+    NOME: Giulia C De Nardi
+    EMAIL: giuliacdenardi@usp.br
+Usuário 74:
+    NOME: Gustavo Yokota Iannotti Souza
+    EMAIL: gusyokota@usp.br
+Usuário 75:
+    NOME: Vitória dos Santos Rosa
+    EMAIL: vitoria_rosa2010@hotmail.com
+Usuário 76:
+    NOME: Leonardo Shoiti Miyashiro
+    EMAIL: leosmiy@gmail.com
+Usuário 77:
+    NOME: Pedro Henrique Gianjoppe dos Santos 
+    EMAIL: pedrohgian@usp.br
+Usuário 78:
+    NOME: Gabriel Rocha Amorim
+    EMAIL: gabriel.rocha.amorim@usp.br
+Usuário 79:
+    NOME: Joã Leonardo da Silva Trosdtorf
+    EMAIL: joaonado10@gmail.com
+Usuário 80:
+    NOME: Guilherme Navarro Borba Adissy
+    EMAIL: guilhermeadissy@gmail.com
+Usuário 81:
+    NOME: Henrique Geribello Giabardo
+    EMAIL: henriquegiabardo@usp.br
+Usuário 82:
+    NOME: Rodrigo Miksian Magaldi
+    EMAIL: rod.magaldi@gmail.com
+Usuário 83:
+    NOME: Rodrigo Kanashiro Sonoda
+    EMAIL: digosonoda@gmail.com
+Usuário 84:
+    NOME: Vinicius Ariel Arruda dos Santos
+    EMAIL: viniciusarielarruda@usp.br
+Usuário 85:
+    NOME: lucas nascimento tulha
+    EMAIL: lucastulhabr@gmail.com
+Usuário 86:
+    NOME: Lucas Freiria de Lima
+    EMAIL: lucas.freiria.lima@usp.br
+Usuário 87:
+    NOME: Vitor Sternlicht
+    EMAIL: mvitsor@gmail.com
+Usuário 88:
+    NOME: Guilherme Reis da Silva
+    EMAIL: guilherme_reis@usp.br
+Usuário 89:
+    NOME: Caio Victor Gouveia Freitas
+    EMAIL: caiofreitas@usp.br
+Usuário 90:
+    NOME: João Pedro Gallo de Oliveira
+    EMAIL: joaopg@usp.br
+Usuário 91:
+    NOME: YoramKraiser Goldstein
+    EMAIL: yogold@usp.br
+Usuário 92:
+    NOME: João Pedro Pereira Matson
+    EMAIL: joaopmatson@gmail.com
+Usuário 93:
+    NOME: Luis Eduardo Rodrigues Costa
+    EMAIL: luis.eduardo.costa@usp.br
+Usuário 94:
+    NOME: Kim Viana
+    EMAIL: kimcv97@gmail.com
+Usuário 95:
+    NOME: Rafael Carvalho Santos
+    EMAIL: rafaelcarvsantos@gmail.com
+Usuário 96:
+    NOME: nathan menezes da luz
+    EMAIL: nathanluz.poli@usp.br
+Usuário 97:
+    NOME: Tiago Santa Maria Rodrigues Marto
+    EMAIL: tiago.marto@hotmail.com
+Usuário 98:
+    NOME: Helena Vidal Zobaran
+    EMAIL: helenazobaran@usp.br
+Usuário 99:
+    NOME: Pier Luigi Nakai Ricchetti
+    EMAIL: pierluigi0609@gmail.com
+Usuário 100:
+    NOME: Beatriz Alves Bessa
+    EMAIL: beatriz.bessa@usp.br
+Usuário 101:
+    NOME: Nayara leal dos santos 
+    EMAIL: naahseven@gmail.com
+Usuário 102:
+    NOME: Adriano Carvalho e Sousa
+    EMAIL: adrianocs@usp.br
+Usuário 103:
+    NOME: Tiago Koji Castro Shibata
+    EMAIL: tiago.shibata@usp.br
+Usuário 104:
+    NOME: Fernando Nunes Santana
+    EMAIL: fernandon39@gmail.com
+Usuário 105:
+    NOME: Henrique Tasaki Imaeda
+    EMAIL: htimaeda@usp.br
+Usuário 106:
+    NOME: Lucas Paiva da Costa
+    EMAIL: lucas.costa56@hotmail.com
+Usuário 107:
+    NOME: Fernando José Correia
+    EMAIL: fe.jc@outlook.com.br
+Usuário 108:
+    NOME: Diego Pinheiro de Moura
+    EMAIL: diegopdemoura@gmail.com
+Usuário 109:
+    NOME: Caio Santos Pimentel
+    EMAIL: caiosantos1996@gmail.com
+Usuário 110:
+    NOME: André Luiz Farão Navarro
+    EMAIL: andrenavarro@usp.br
+Usuário 111:
+    NOME: Gabriel Augusto Lopes Miranda
+    EMAIL: gabriel_augusto_lopes@usp.br
+Usuário 112:
+    NOME: Bruno Pasini
+    EMAIL: bruno.pasini@yahoo.com.br
+Usuário 113:
+    NOME: Alexandre Hoppe Inoue
+    EMAIL: alexandre.hoppe.inoue@usp.br
+Usuário 114:
+    NOME: Eduardo Spera Prates
+    EMAIL: eduardo.spera@usp.br
+Usuário 115:
+    NOME: Samuel Vieira Ducca
+    EMAIL: samukaducca@hotmail.com
+Usuário 116:
+    NOME: Lucas Gabriel de Castro Negrini
+    EMAIL: lucas.negrini@usp.br
+Usuário 117:
+    NOME: Eduardo Castilho de Almeida Prado
+    EMAIL: educastilho07@hotmail.com
+Usuário 118:
+    NOME: Giovanna Morghett Gaboardi
+    EMAIL: giovanna_morghett@usp.br
+Usuário 119:
+    NOME: Rodrigo Rodrigues Gesuatto Faria
+    EMAIL: rodrigo.faria30@yahoo.com.br
+Usuário 120:
+    NOME: Thomas Palmeira Ferraz
+    EMAIL: thomas.ferraz@usp.br
+Usuário 121:
+    NOME: Guilherme Migliati de Oliveira
+    EMAIL: gui_migli@usp.br
+Usuário 122:
+    NOME: Paulo Jung Tsu Pu
+    EMAIL: oluap_fu@yahoo.com.br
+Usuário 123:
+    NOME: Vinícius Florentino Macedo Souza
+    EMAIL: viniciusouza98@hotmail.com
+Usuário 124:
+    NOME: Henrique Cleves de Oliveira Carmo
+    EMAIL: henrique.carmo@usp.br
+Usuário 125:
+    NOME: Sungwon Yoon
+    EMAIL: ehddb@hotmail.com
+Usuário 126:
+    NOME: Bruno Borges Paschoalinoto
+    EMAIL: bruno@paschoalinoto.com

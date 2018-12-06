@@ -1,0 +1,70 @@
+APPSIMPLES WEB MAILING LIST
+Usuário 1:
+    NOME: Aldomar Pietro Santana Silva
+    EMAIL: aldo_pietro@hotmail.com
+Usuário 2:
+    NOME: Lucas Lopes de Paula Junior
+    EMAIL: lucas.lopes.paula@usp.br
+Usuário 3:
+    NOME: Marcos Vinicius Nogueira
+    EMAIL: marcosvinicius.nc@gmail.com
+Usuário 4:
+    NOME: Gabriel Morghett Gaboardi
+    EMAIL: gabriel.morghett@usp.br
+Usuário 5:
+    NOME: Rodrigo Sakai
+    EMAIL: rodrigoysakai@gmail.com
+Usuário 6:
+    NOME: Felipe Kenzo Shiraishi
+    EMAIL: felhipeshiraishi@gmail.com
+Usuário 7:
+    NOME: José Otávio Brochado Colombini
+    EMAIL: josecolombini@usp.br
+Usuário 8:
+    NOME: Arthur Andrade Ilario
+    EMAIL: ailario@usp.br
+Usuário 9:
+    NOME: Isabela Comegna dos Santos
+    EMAIL: isacomegna@gmail.com
+Usuário 10:
+    NOME: Gabriel Politano da Silveira Asnar
+    EMAIL: gapolitano@hotmail.com
+Usuário 11:
+    NOME: Danilo de Sousa Lopes
+    EMAIL: danilo.slopes@usp.br
+Usuário 12:
+    NOME: Isaac Guillermo Gonzales Vizcarra
+    EMAIL: isaacgonzalesv@gmail.com
+Usuário 13:
+    NOME: Rafael Yaginuma
+    EMAIL: rafaelyaginuma@gmail.com
+Usuário 14:
+    NOME: Luis Eduardo Rodrigues Costa
+    EMAIL: luis.eduardo.costa@usp.br
+Usuário 15:
+    NOME: Lucas Freiria de Lima
+    EMAIL: lucas.freiria.lima@usp.br
+Usuário 16:
+    NOME: Tiago Koji Castro Shibata
+    EMAIL: tiago.shibata@usp.br
+Usuário 17:
+    NOME: Guilherme Carvalho dos Santos
+    EMAIL: gui.carv.santos@gmail.com
+Usuário 18:
+    NOME: Eduardo Castilho de Almeida Prado
+    EMAIL: educastilho07@hotmail.com
+Usuário 19:
+    NOME: André Luiz Farão Navarro
+    EMAIL: andrenavarro@usp.br
+Usuário 20:
+    NOME: Erick Andrade Schwarzelmuller
+    EMAIL: erick.andrade@usp.br
+Usuário 21:
+    NOME: Paulo Jung Tsu Pu
+    EMAIL: oluap_fu@yahoo.com.br
+Usuário 22:
+    NOME: Guilherme Migliati de Oliveira
+    EMAIL: gui_migli@usp.br
+Usuário 23:
+    NOME: Andrei dos Santos
+    EMAIL: andrei.sgi97@gmail.com
