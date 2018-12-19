@@ -1,17 +1,22 @@
 export class SnsMessageManager{
     public messages: MessageDictionary = {
         LikePost: {
-            'pt': 'O usuário $$name$$ curtiu seu post ',
-            'en': 'The user $$name$$ liked your post',
+            'pt': 'O usuário $name$ curtiu seu post ',
+            'en': 'The user $name$ liked your post',
         },
         ExchangePropose: {
-            'pt':'$name$ fez uma proposta no item $itemName$',
+            'pt': '$name$ fez uma proposta no item $itemName$',
             'en': '$name$ made a propose to item $itemName$',
+        },
+        CommentPost: {
+            pt: 'Alguém comentou seu post',
+            en: 'Somebody has commented in your post',
         }
     }
 
     generateMessage(pushType: PushTypes, language: LanguageEnum, ...args: string[]) {
         let message = this.messages[pushType][language]
+       
         if (!message) {
             message = this.messages[pushType][LanguageEnum.en]
         }
@@ -28,9 +33,11 @@ export class SnsMessageManager{
 }
 
 
+
 export enum PushTypes{
     LikePost = "LikePost",
-    ExchagePropose = "ExchangePropose"
+    ExchagePropose = "ExchangePropose",
+    CommentPost = "CommentPost"
 }
 
 type MessageDictionary = {
@@ -40,7 +47,6 @@ type MessageDictionary = {
 type TranslatedMessages = {
     [P in LanguageEnum]?: string
 }
-
 
 export enum LanguageEnum {
     en = 'en',
@@ -79,6 +85,6 @@ export enum LanguageEnum {
   
 
 const manager = new SnsMessageManager()
-const m = manager.generateMessage(PushTypes.ExchagePropose, LanguageEnum.pt, 'Nome do usuario', 'Nome do item')
+const m = manager.generateMessage(PushTypes.ExchagePropose, LanguageEnum.en, 'Golias', 'book')
 
 console.log(m)
