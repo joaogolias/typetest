@@ -1,49 +1,102 @@
 const uuid = require('uuid')
-
-function jenGeneratior(quantity) {
+const fs = require('fs')
+function jenGenerator(quantity) {
     let i = 0
-    const arr = []
+    const machArr = []
+    const profArr = []
     while(i<quantity) {
-        console.log(`JEN ${i+1}: `)
         const id = uuid.v4().replace(/-/g, '')
         const _id = id
-        const jen = {
-            seen: {
-                match_seen: true
-            },
-            _id,
-            id,
-            closed: randomBoolean(),
-            common_friend_count: Math.floor(Math.random()*60),
-            common_like_count: Math.floor(Math.random()*20),
-            created_date: generateRandomDate(),
-            dead: randomBoolean(),
-            message_count: Math.floor(Math.random()*5+5),
-            messages: [],
-            muted: false,
-            participants: [id.substring(0, id.length/2)],
-            pending: randomBoolean(),
-            is_super_like: false,
-            is_boost_match: false,
-            is_fast_match: false,
-            person: {
-                _id: _id.substring(0, id.length/2) + uuid.v4().replace(/-/g, '').substring(0, 6),
-                name: getName(),
-                bio:  generateBio(),
-                birth_date:  generateRandomDate(1996, 3),
-                gender: 1,
-                ping_time: generateRandomDate(2014, 0, true),
-                photos: generatePhotos(Math.floor(Math.random()*2)+1),
-            },
-            following: randomBoolean(),
-            following_moments: randomBoolean()
-        }
-        console.log(jen)
-        arr.push(jen)
-        console.log("\n\n\n")
+        const birth_date = generateRandomDate(1996, 3)
+        const name = getName()
+        const photos = generatePhotos()
+        const gender = 1
+        const ping_time = generateRandomDate(2014, 0, true)
+        const arr = ['São Judas', 'Uninove', 'Unip', 'UAM', 'FAM - Faculdade das Americas', 'PUC', 'FAAP', 'FATEC', 'FGV - Fundação Getulio Vargas', 'Escola Superior de Propaganda e Marketing', 'Mackenzie Presbiterian University', 'IMT - Instituo Maua de Tecnologia']
+        const school = getRandomValueFromArray(arr)
+        profArr.push(generateProfile(_id, birth_date, name, school, photos, gender, ping_time))
+        machArr.push(generateMatch(_id, birth_date, name, school, photos, gender, ping_time))
         i++
     }
-    return arr
+    fs.writeFile('./profiles.json', JSON.stringify(profArr), (err) => {
+        if (err) console.log(err)
+    })
+    fs.writeFile('./matches.json', JSON.stringify(machArr), (err) => {
+        if (err) console.log(err)
+    })
+    console.log(profArr)
+    console.log("\n\n\n\n\n")
+    console.log(machArr)
+}
+
+function generateProfile(_id, birth_date, name, school, photos, gender, ping_time) {
+    const schools = []
+    schools.push(school)
+    const prof = {
+        status: 200,
+        results: {
+            connection_count: Math.floor(Math.random()*5),
+            common_interests: [],
+            _id,
+            birth_date,
+            name,
+            ping_time,
+            photos,
+            schools,
+            gender,
+            birth_date_info: "fuzzy birthdate active, not displaying real birth_date",
+            distance_mi: Math.floor(Math.random()*5),
+            jobs:[],
+            common_connections:[],
+            is_tinder_u:false
+        }
+    }
+    return prof
+}
+
+
+function generateMatch(_id, birth_date, name, school, photos, gender, ping_time) {
+    const id = _id
+    const jen = {
+        seen: {
+            match_seen: true
+        },
+        _id,
+        id,
+        closed: randomBoolean(),
+        common_friend_count: Math.floor(Math.random()*60),
+        common_like_count: Math.floor(Math.random()*20),
+        created_date: generateRandomDate(),
+        dead: randomBoolean(),
+        message_count: Math.floor(Math.random()*5+5),
+        messages: [],
+        muted: false,
+        participants: [id.substring(0, id.length/2)],
+        pending: randomBoolean(),
+        is_super_like: false,
+        is_boost_match: false,
+        is_fast_match: false,
+        person: {
+            _id: _id.substring(0, id.length/2) + uuid.v4().replace(/-/g, '').substring(0, 6),
+            name,
+            bio:  generateBio(school),
+            birth_date,
+            gender,
+            ping_time,
+            photos: photos.map((i) => ({
+                id: i.id,
+                url: i.url,
+                processedFiles: i.processedFiles,
+                fileName: i.fileName,
+                extension: i.extension
+            })),
+        },
+        following: randomBoolean(),
+        following_moments: randomBoolean()
+    }
+    console.log('jen: ')
+    console.log(jen)
+    return jen
 }
 
 function generateRandomDate(startYear = 2015, yearStep = 2, setTimeZero = false) {
@@ -58,7 +111,7 @@ function generateRandomDate(startYear = 2015, yearStep = 2, setTimeZero = false)
         `${setTimeZero ? "00" : (hour < 10 ? "0" + hour : hour)}:${setTimeZero ? "00" : minute}:${setTimeZero ? "00" : second}Z`
 }
 
-function generateBio() {
+function generateBio(school) {
     let finalString = ""
     let arr = []
     if(randomBoolean()) {
@@ -122,11 +175,8 @@ function generateBio() {
         finalString+=getRandomValueFromArray(arr)
     }
     if(randomBoolean()){
-        arr = ['São Judas', 'Uninove', 'Unip', 'UAM', 'FAM - Faculdade das Americas', 'PUC', 'FAAP', 'FATEC', 'FGV - Fundação Getulio Vargas', 'Escola Superior de Propaganda e Marketing', 'Mackenzie Presbiterian University', 'IMT - Instituo Maua de Tecnologia']
-        finalString+=' \n'
-        finalString+=getRandomValueFromArray(arr)
+        finalString+=` \n${getRandomValueFromArray(arr)}`
     }
-    console.log(finalString)
     return finalString
 }
 
@@ -163,7 +213,6 @@ function generatePhotos(numberOfPhotos = 1) {
     const arr = []
     const url = generatePhotoUrl()
     const id = uuid.v4()
-    console.log("PHOTOS:")
     while(i < numberOfPhotos) {
         const photo = {
             id,
@@ -188,9 +237,24 @@ function generatePhotos(numberOfPhotos = 1) {
                 width: 84
             }],
             fileName: `${id}.jpg`,
-            extension: "jpg"
+            extension: "jpg",
+            crop_info:{  
+                user:{  
+                   width_pct:1,
+                   x_offset_pct:0,
+                   height_pct:1,
+                   y_offset_pct:0
+                },
+                algo:{  
+                   width_pct: Math.random()*0.5234094811209384098,
+                   x_offset_pct: Math.random()*0.5234094811209384098,
+                   height_pct: Math.random()*0.5234094811209384098,
+                   y_offset_pct: Math.random()*0.5234094811209384098
+                },
+                processed_by_bullseye:true,
+                user_customized:false
+             }
         }
-        console.log(photo)
         arr.push(photo)
         i++
     }
@@ -198,7 +262,7 @@ function generatePhotos(numberOfPhotos = 1) {
 }
 
 function generatePhotoUrl() {
-    return 'https://www.google.com'
+    return 'https://www.notibras.com/site/wp-content/uploads/2016/11/zeus-07.jpg'
 }
 
 function randomBoolean() {
@@ -206,5 +270,4 @@ function randomBoolean() {
     // return true
 }
 
-
-console.log(JSON.stringify(jenGeneratior(20)))
+jenGenerator(5)
