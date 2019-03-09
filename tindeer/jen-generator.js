@@ -24,9 +24,9 @@ function jenGenerator(quantity) {
     fs.writeFile('./matches.json', JSON.stringify(machArr), (err) => {
         if (err) console.log(err)
     })
-    console.log(profArr)
-    console.log("\n\n\n\n\n")
-    console.log(machArr)
+    // console.log(profArr)
+    // console.log("\n\n\n\n\n")
+    // console.log(machArr)
 }
 
 function generateProfile(_id, birth_date, name, school, photos, gender, ping_time) {
@@ -94,8 +94,10 @@ function generateMatch(_id, birth_date, name, school, photos, gender, ping_time)
         following: randomBoolean(),
         following_moments: randomBoolean()
     }
-    console.log('jen: ')
-    console.log(jen)
+
+    // console.log('jen: ')
+    // console.log(jen)
+    console.log(jen.person.photos);
     return jen
 }
 
@@ -262,7 +264,11 @@ function generatePhotos(numberOfPhotos = 1) {
 }
 
 function generatePhotoUrl() {
-    return 'https://www.notibras.com/site/wp-content/uploads/2016/11/zeus-07.jpg'
+    const images = require('../images.json')
+    const filteredImages = images.filter((obj) => obj.selected === false);
+    const seletectedObject = filteredImages[Math.floor(Math.random()*(filteredImages.length-1))]
+    seletectedObject.selected = true;
+    return seletectedObject.link;
 }
 
 function randomBoolean() {
