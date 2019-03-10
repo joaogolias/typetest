@@ -3,9 +3,6 @@ import { FileManager } from '../../utils/file-manager';
 import { TimeManager } from '../../utils/time-manager';
 import { PromptManager, PromptColor } from '../../utils/prompt-manager';
 
-
-
-
 class PuppeteerManager {
     private browser: puppeteer.Browser;
 
@@ -56,7 +53,7 @@ class PuppeteerManager {
                         await FileManager.writeFile(arrayOfLinks, './images.json');
                     }
                 }
-                TimeManager.sleep(500);
+                // TimeManager.sleep(500);
             } catch (err) {
                 console.log('Err in Puppeteer: ', err)
                 if(err.message.toLowerCase().indexOf('timeout') !== -1) {
@@ -88,7 +85,7 @@ async function GetImageMain() {
     const initialLength = initialArrayOfLinks.length;
     PromptManager.printColorfulLog(`Starting with ${initialLength} images`, PromptColor.BLUE)
     try {
-        const arrayOfPhotos = await puppeteerManager.getImages(30, 'female');
+        const arrayOfPhotos = await puppeteerManager.getImages(15, 'female');
         PromptManager.printColorfulLog(`Stopping with ${arrayOfPhotos.length} images`, PromptColor.GREEN)
         const finishedDate = new Date().getTime();
         PromptManager.printColorfulLog(`Taken time: ${TimeManager.pretiffyTime(finishedDate - date)} to add ${arrayOfPhotos.length - initialLength} `, PromptColor.BLUE)
