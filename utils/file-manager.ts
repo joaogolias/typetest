@@ -3,7 +3,7 @@ import * as fs from 'fs'
 export class FileManager {
     public static rightDirName = __dirname.replace("build/", "").replace('utils', '')
 
-    public static async writeFile(infos: any[], fileName: string) {
+    public static async writeFile(infos: any, fileName: string) {
 
         return new Promise((resolve, reject) => {
             fs.writeFile(fileName, JSON.stringify(infos), (err) => {
