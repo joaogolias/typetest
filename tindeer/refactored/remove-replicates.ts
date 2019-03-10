@@ -3,7 +3,7 @@ import { FileManager } from "../../utils/file-manager";
 
 
 const main = async() => {
-    const array = FileManager.readJson('./images.json')
+    const array = FileManager.loadJson('./images.json')
     const newArray: any[] = []
     console.log('Initial array length: ', array.length)
     for(const item of array) {

@@ -4,7 +4,12 @@ import readlineLib = require('readline')
 export enum PromptColor {
     GREEN = "\x1b[32m",
     BLUE = "\x1b[36m",
-    RED = "\x1b[31m"
+    RED = "\x1b[31m",
+    WHITE = "\x1b[0m"
+}
+
+export enum Space {
+    BEFORE, AFTER
 }
 
 export class PromptManager {
@@ -14,8 +19,20 @@ export class PromptManager {
         terminal: false
     });
 
+    public static withSpace(quantity: number = 1) {
+        for(let i = 0; i < quantity; i++) {
+            console.log('\n')
+        }
+        return PromptManager
+    }
+
+    public static consoleLog(text: string, data: any) {
+        console.log(text, data)
+    }
+
     public static printColorfulLog(text: string, color: string) {
         process.stdout.write(`${color}${text}\x1b[0m`)
+        return PromptManager
     }
 
     public static readline(value: string): Promise<string> {

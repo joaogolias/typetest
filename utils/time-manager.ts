@@ -1,5 +1,28 @@
 
 export class TimeManager {
+    private initialTime: Date
+
+    public startCount() {
+        this.initialTime = new Date()
+    }
+
+    public finishCount(){
+        const finalTime = new Date()
+        const elapsedTime = finalTime.getTime() - this.initialTime.getTime()
+        return {
+            elapsedTime,
+            pretiffyTime: this.pretiffyTime(elapsedTime)
+        }
+    }
+
+    public pretiffyTime(miliseconds: number): string {
+        return TimeManager.pretiffyTime(miliseconds)
+    }
+
+    public sleep(miliseconds: number) {
+        return TimeManager.sleep(miliseconds)
+    }
+    
     public static sleep(miliseconds: number) {
         const start = new Date().getTime();
         for(let i = 0; i < 1e12; i++) {

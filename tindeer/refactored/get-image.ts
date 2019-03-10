@@ -2,6 +2,7 @@ import * as puppeteer from 'puppeteer'
 import { FileManager } from '../../utils/file-manager';
 import { TimeManager } from '../../utils/time-manager';
 import { PromptManager, PromptColor } from '../../utils/prompt-manager';
+import { GeneralError } from '../../utils/error-manager';
 
 class PuppeteerManager {
     private browser: puppeteer.Browser;
@@ -18,12 +19,12 @@ class PuppeteerManager {
     
         let i = 0;
         let count = 0;
-        const arrayOfLinks = FileManager.readJson('images.json') as any[]
+        const arrayOfLinks = FileManager.loadJson('images.json') as any[]
         
         while (i < quantity) {
             try {
-                console.log('\n\n')
-                console.log('Image number: ', i+1);
+
+                PromptManager.withSpace(2).printColorfulLog(`Image number:  ${i+1}`, PromptColor.WHITE)
 
                 await page.select('.form-control', 'female')
                 TimeManager.sleep(500);
@@ -32,44 +33,50 @@ class PuppeteerManager {
                 await page.waitForSelector('.basic-face .face .img-responsive');
 
                 const  imgSrc = await page.$eval('.basic-face .face .img-responsive', img => img.getAttribute('src'));
-                console.log(imgSrc);
+                PromptManager.withSpace().printColorfulLog(`Image Soruce:  ${imgSrc}`, PromptColor.WHITE).withSpace()
 
                 if(imgSrc && imgSrc.indexOf(restriction) !== -1) {
                     const link = `https://fakepersongenerator.com${imgSrc}`
                     const foundObj = arrayOfLinks.find((obj: any) => {
                         return obj.link === link
                     })
-                    console.log('foundObj: ', foundObj)
+                    PromptManager.consoleLog('Object Found: ', foundObj)
+
                     if(!foundObj) {
-                        console.log('object to write: ', {
+                        const objectToWrite = {
                             link,
                             selected: false
-                        });
-                        arrayOfLinks.push({
-                            link,
-                            selected: false
-                        })
+                        }
+                        
+                        PromptManager.consoleLog('Object to write: ', objectToWrite)
+                        
+                        arrayOfLinks.push(objectToWrite)
                         i++;
+
                         await FileManager.writeFile(arrayOfLinks, './images.json');
                     }
                 }
                 count++
             } catch (err) {
-                console.log('Err in Puppeteer: ', err)
+                PromptManager.withSpace().printColorfulLog(err, PromptColor.RED).withSpace()
+                let error = new GeneralError()
+                error.addedImages = i || 0
+                error.totalImages = arrayOfLinks.length
+                error.totalIteractions = count || 1
+
                 if(err.message.toLowerCase().indexOf('timeout') !== -1) {
-                    throw new Error('timeout'); 
+                    error.message = 'timeout'
+                    
                 } else if(err.message.indexOf('failed to find element matching') !== -1) {
-                    throw new Error('matching'); 
+                    error.message = 'matching'
+                } else {
+                    error.message = 'unknow error'
                 }
 
-                PromptManager.loadingColorfulLog(`We've found ${count} imagens but only ${i} `, PromptColor.BLUE)
-                this.browser.close();
-                break;
+                this.browser.close()
+                throw error
             }
         }
-
-        console.log('COUNT: ', count);
-        console.log('QUANTITY: ', quantity);
         this.browser.close();
         return arrayOfLinks
     }
@@ -81,50 +88,51 @@ class PuppeteerManager {
 }
 
 async function GetImageMain() {
+    const timeManager = new TimeManager()
+    timeManager.startCount()
+
     const puppeteerManager = new PuppeteerManager()
-    const date = new Date().getTime()
-    const initialArrayOfLinks = FileManager.readJson('images.json');
+
+    const initialArrayOfLinks = FileManager.loadJson('images.json');
     const initialLength = initialArrayOfLinks.length;
-    PromptManager.printColorfulLog(`Starting with ${initialLength} images`, PromptColor.BLUE)
+   
+    PromptManager.withSpace().printColorfulLog(`Starting with ${initialLength} images`, PromptColor.BLUE)
     try {
-        const arrayOfPhotos = await puppeteerManager.getImages(15, 'female');
-        PromptManager.printColorfulLog(`Stopping with ${arrayOfPhotos.length} images`, PromptColor.GREEN)
-        const finishedDate = new Date().getTime();
-        PromptManager.printColorfulLog(`Taken time: ${TimeManager.pretiffyTime(finishedDate - date)} to add ${arrayOfPhotos.length - initialLength} `, PromptColor.BLUE)
+        await puppeteerManager.getImages(30, 'female');
     } catch (error) {
+        TimeManager.sleep(5000)
+        await MakeLogs(timeManager.finishCount().pretiffyTime, timeManager.finishCount().elapsedTime, error.totalImages, error.addedImages, error.totalIteractions)
         if(error.message === "timeout") {
-            PromptManager.printColorfulLog('Timeout Error', PromptColor.RED)
-            console.log('\n')
-            const arrayOfLinks = FileManager.readJson('images.json');
-            PromptManager.printColorfulLog(`Stopping with ${arrayOfLinks.length} images`, PromptColor.GREEN)
-            console.log('\n')
-            const loading = PromptManager.loadingColorfulLog('Restarting', PromptColor.BLUE)
-            console.log('\n')
-            TimeManager.sleep(5000)
-            console.log('hahaha')
-            PromptManager.stopLoading(loading);
-            const finishedDate = new Date().getTime();
-                        PromptManager.printColorfulLog(`Taken time: ${TimeManager.pretiffyTime(finishedDate - date)} to add ${arrayOfLinks.length - initialLength} `, PromptColor.BLUE)
             GetImageMain()
         } else if(error.message === "matching") {
-            PromptManager.printColorfulLog('Matching Error', PromptColor.RED)
-            console.log('\n')
-            const arrayOfLinks = FileManager.readJson('images.json');
-            PromptManager.printColorfulLog(`Stopping with ${arrayOfLinks.length} images`, PromptColor.GREEN)
-            console.log('\n')
-            const loading = PromptManager.loadingColorfulLog('Restarting', PromptColor.BLUE)
-            console.log('\n')
-            PromptManager.stopLoading(loading);
-            const finishedDate = new Date().getTime();
-                        PromptManager.printColorfulLog(`Taken time: ${TimeManager.pretiffyTime(finishedDate - date)} to add ${arrayOfLinks.length - initialLength} `, PromptColor.BLUE)
             GetImageMain()
-        } else {
-            const arrayOfLinks = FileManager.readJson('images.json');
-            const finishedDate = new Date().getTime();
-            PromptManager.printColorfulLog(`Taken time: ${TimeManager.pretiffyTime(finishedDate - date)} to add ${arrayOfLinks.length - initialLength} `, PromptColor.BLUE)
-            puppeteerManager.closeBrowser()
-        }
+        } 
     }
+}
+
+async function MakeLogs(prettyTakenTime: string, takenTime: number, totalImages: number, addedImages: number, totalIteractions: number) {
+    PromptManager.withSpace().printColorfulLog(`Stopping with ${totalImages} images`, PromptColor.GREEN)
+    
+    const loading = PromptManager.withSpace().loadingColorfulLog('Restarting', PromptColor.BLUE)
+    PromptManager.stopLoading(loading);
+    
+    PromptManager.withSpace().printColorfulLog(`Taken time: ${prettyTakenTime} to add ${addedImages} `, PromptColor.BLUE)
+
+    const successfullPorcentage = `${((addedImages/totalIteractions)*100).toFixed(2)}%`
+    PromptManager.withSpace().printColorfulLog(`Successfull Porcentage: ${successfullPorcentage}`, PromptColor.BLUE).withSpace()
+    
+    const statisticsObject = {
+        takenTime,
+        addedImages,
+        totalIteractions,
+        successfullPorcentage,
+        prettyTakenTime
+    }
+
+    const statistics = FileManager.loadJson('./get-image-statistics.json')
+    statistics.push(statisticsObject)
+    await FileManager.writeFile(statistics, './get-image-statistics.json')
+    return
 }
 
 GetImageMain()
