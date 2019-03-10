@@ -276,4 +276,4 @@ function randomBoolean() {
     // return true
 }
 
-jenGenerator(5)
+jenGenerator(3000)

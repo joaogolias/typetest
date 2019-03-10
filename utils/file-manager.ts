@@ -1,5 +1,5 @@
 import * as fs from 'fs'
-import { PromptManager, PromptColor } from './prompt-manager';
+import { PromptManager, PromptColor } from './prompt-utils';
 
 export class FileManager {
     public static rightDirName = __dirname.replace("build/", "").replace('utils', '')

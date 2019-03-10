@@ -1,11 +1,14 @@
 import readlineLib = require('readline')
+import { FileManager } from './file-manager';
 // import { TimeManager } from './time-manager';
 
 export enum PromptColor {
     GREEN = "\x1b[32m",
     BLUE = "\x1b[36m",
     RED = "\x1b[31m",
-    WHITE = "\x1b[0m"
+    YELLOW = "\x1b[33m",
+    WHITE = "\x1b[0m",
+    MAGNETA = "\x1b[35m"
 }
 
 export enum Space {
@@ -21,7 +24,7 @@ export class PromptManager {
 
     public static withSpace(quantity: number = 1) {
         for(let i = 0; i < quantity; i++) {
-            console.log('\n')
+            process.stdout.write('\n')
         }
         return PromptManager
     }
@@ -62,7 +65,33 @@ export class PromptManager {
         clearInterval(intervalId)
         process.stdout.write('\x1b[0m')
     }
-    
 }
 
+export class CustomLayouts {
+    public static longerDivider(color = PromptColor.YELLOW) {
+        PromptManager.withSpace().printColorfulLog("======================================================================", color).withSpace()
+    }
+    public static simpleDivider(color = PromptColor.WHITE) {
+        PromptManager.withSpace().printColorfulLog("--------------------------------------------------", color)
+    }
+}
+
+export class PrintFile {
+    public static printJson(fileName: string, onlyLength = true) {
+        const json = FileManager.loadJson(fileName)
+        if(json instanceof Array) {
+            PromptManager.printColorfulLog(`Length: ${json.length}`, PromptColor.WHITE)
+            if(!onlyLength) PromptManager.printColorfulLog(JSON.stringify(json), PromptColor.WHITE)
+        }
+    }
+}
+
+
+async function main() {
+    const fileName = await PromptManager.readline('Qual o nome do arquivo? ')
+    const onlyLength = await PromptManager.readline('Se for array, só o tamanho? (1 - sim, 0 - não)')
+    PrintFile.printJson(fileName, onlyLength === '1')
+}
+
+main()
 // loadingColorfulLog("Ola", Color.BLUE)

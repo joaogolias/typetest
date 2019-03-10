@@ -1,7 +1,7 @@
 import * as puppeteer from 'puppeteer'
 import { FileManager } from '../../utils/file-manager';
 import { TimeManager } from '../../utils/time-manager';
-import { PromptManager, PromptColor } from '../../utils/prompt-manager';
+import { PromptManager, PromptColor, CustomLayouts } from '../../utils/prompt-utils';
 import { GeneralError } from '../../utils/error-manager';
 
 class PuppeteerManager {
@@ -24,7 +24,7 @@ class PuppeteerManager {
         while (i < quantity) {
             try {
 
-                PromptManager.withSpace(2).printColorfulLog(`Image number:  ${i+1}`, PromptColor.WHITE)
+                PromptManager.withSpace(2).printColorfulLog(`Image number:  ${i+1}`, PromptColor.BLUE)
 
                 await page.select('.form-control', 'female')
                 TimeManager.sleep(500);
@@ -40,20 +40,17 @@ class PuppeteerManager {
                     const foundObj = arrayOfLinks.find((obj: any) => {
                         return obj.link === link
                     })
-                    PromptManager.consoleLog('Object Found: ', foundObj)
 
                     if(!foundObj) {
                         const objectToWrite = {
                             link,
                             selected: false
                         }
-                        
-                        PromptManager.consoleLog('Object to write: ', objectToWrite)
-                        
                         arrayOfLinks.push(objectToWrite)
                         i++;
-
-                        await FileManager.writeFile(arrayOfLinks, './images.json');
+                        PromptManager.printColorfulLog(`Saving image ${link}`, PromptColor.GREEN)
+                    } else {
+                        PromptManager.printColorfulLog(`${link} was already saved`, PromptColor.MAGNETA)
                     }
                 }
                 count++
@@ -63,6 +60,7 @@ class PuppeteerManager {
                 error.addedImages = i || 0
                 error.totalImages = arrayOfLinks.length
                 error.totalIteractions = count || 1
+                if(error.addedImages >= 1) await FileManager.writeFile(arrayOfLinks, 'images.json');
 
                 if(err.message.toLowerCase().indexOf('timeout') !== -1) {
                     error.message = 'timeout'
@@ -96,12 +94,19 @@ async function GetImageMain() {
     const initialArrayOfLinks = FileManager.loadJson('images.json');
     const initialLength = initialArrayOfLinks.length;
    
+    CustomLayouts.longerDivider()
     PromptManager.withSpace().printColorfulLog(`Starting with ${initialLength} images`, PromptColor.BLUE)
     try {
         await puppeteerManager.getImages(30, 'female');
     } catch (error) {
         TimeManager.sleep(5000)
-        await MakeLogs(timeManager.finishCount().pretiffyTime, timeManager.finishCount().elapsedTime, error.totalImages, error.addedImages, error.totalIteractions)
+        await MakeLogs(
+            timeManager.finishCount().pretiffyTime,
+            timeManager.finishCount().elapsedTime,
+            error.totalImages,
+            error.addedImages,
+            error.totalIteractions)
+            TimeManager.sleep(1000)
         if(error.message === "timeout") {
             GetImageMain()
         } else if(error.message === "matching") {
@@ -110,29 +115,38 @@ async function GetImageMain() {
     }
 }
 
-async function MakeLogs(prettyTakenTime: string, takenTime: number, totalImages: number, addedImages: number, totalIteractions: number) {
-    PromptManager.withSpace().printColorfulLog(`Stopping with ${totalImages} images`, PromptColor.GREEN)
-    
-    const loading = PromptManager.withSpace().loadingColorfulLog('Restarting', PromptColor.BLUE)
-    PromptManager.stopLoading(loading);
-    
-    PromptManager.withSpace().printColorfulLog(`Taken time: ${prettyTakenTime} to add ${addedImages} `, PromptColor.BLUE)
+async function MakeLogs(
+    prettyTakenTime: string, 
+    takenTime: number, 
+    totalImages: number, 
+    addedImages: number, 
+    totalIteractions: number) {
+        CustomLayouts.simpleDivider()
 
-    const successfullPorcentage = `${((addedImages/totalIteractions)*100).toFixed(2)}%`
-    PromptManager.withSpace().printColorfulLog(`Successfull Porcentage: ${successfullPorcentage}`, PromptColor.BLUE).withSpace()
-    
-    const statisticsObject = {
-        takenTime,
-        addedImages,
-        totalIteractions,
-        successfullPorcentage,
-        prettyTakenTime
-    }
+        PromptManager.withSpace().printColorfulLog(`INFOMRATION OF LAST REQUEST`, PromptColor.WHITE)
+        PromptManager.withSpace().printColorfulLog(`Stopping with ${totalImages} images`, PromptColor.WHITE)
+            
+        PromptManager.withSpace().printColorfulLog(`Taken time: ${prettyTakenTime} to add ${addedImages} `, PromptColor.WHITE)
 
-    const statistics = FileManager.loadJson('./get-image-statistics.json')
-    statistics.push(statisticsObject)
-    await FileManager.writeFile(statistics, './get-image-statistics.json')
-    return
+        const successfullPorcentage = `${((addedImages/totalIteractions)*100).toFixed(2)}%`
+        PromptManager.withSpace().printColorfulLog(`Successfull Porcentage: ${successfullPorcentage} (${addedImages}/${totalIteractions})`, PromptColor.WHITE).withSpace()
+        
+        const statisticsObject = {
+            takenTime,
+            addedImages,
+            totalIteractions,
+            successfullPorcentage,
+            prettyTakenTime
+        }
+
+        const statistics = FileManager.loadJson('get-image-statistics.json')
+        statistics.push(statisticsObject)
+        await FileManager.writeFile(statistics, 'get-image-statistics.json')
+        CustomLayouts.simpleDivider()
+
+        const loading = PromptManager.withSpace().loadingColorfulLog('Restarting', PromptColor.WHITE)
+        PromptManager.stopLoading(loading)
+        return
 }
 
 GetImageMain()
