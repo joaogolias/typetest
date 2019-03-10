@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @types/pupperteer
+  /usr/local/bin/node /usr/local/bin/yarn add @types/plotly
 
 PATH: 
   /Users/joaogolias/.rvm/gems/ruby-2.6.0/bin:/Users/joaogolias/.rvm/gems/ruby-2.6.0@global/bin:/Users/joaogolias/.rvm/rubies/ruby-2.6.0/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/joaogolias/.rvm/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fpupperteer: Not found
+  Error: https://registry.yarnpkg.com/@types%2fplotly: Not found
       at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:65894:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:129018:22)
       at Request.emit (events.js:182:13)
@@ -38,6 +38,7 @@ npm manifest:
       "@types/node": "^11.10.4",
       "@types/node-fetch": "^2.1.4",
       "@types/nodemailer": "^4.6.6",
+      "@types/puppeteer": "^1.12.2",
       "@types/uuid": "^3.4.4",
       "csv-parse": "^4.3.3",
       "eslint": "^5.6.0",
@@ -47,6 +48,7 @@ npm manifest:
       "firebase-admin": "^6.1.0",
       "jest": "^23.6.0",
       "nodemailer": "^5.1.1",
+      "plotly": "^1.0.6",
       "puppeteer": "^1.13.0",
       "soap": "^0.25.0",
       "ts-jest": "^23.10.4",
@@ -454,6 +456,13 @@ Lockfile:
     version "4.6.6"
     resolved "https://registry.yarnpkg.com/@types/nodemailer/-/nodemailer-4.6.6.tgz#2ce2bde5dd5bb4546e11390e1babd80ba35e2154"
     integrity sha512-N2czhXs7fbQhvoquEGzmHAWttnxLfrM3+cWMRFX4hTQq4GE3VyaSE3MOOse4VoNgvtti/H5ow/Hq9KXu/UMWqA==
+    dependencies:
+      "@types/node" "*"
+  
+  "@types/puppeteer@^1.12.2":
+    version "1.12.2"
+    resolved "https://registry.yarnpkg.com/@types/puppeteer/-/puppeteer-1.12.2.tgz#5e3c8ab57fe3e0c9d75d8deeb6bf290b57321dd7"
+    integrity sha512-EGfxdNxqsEQiY6Ce+4rRD8PsDD18b5FWR+J/gWX7J/UKNRk1Pi9bircx0oADMNF2RdbyzmC+7TU95nwnerFwlA==
     dependencies:
       "@types/node" "*"
   
@@ -3508,7 +3517,7 @@ Lockfile:
       for-in "^1.0.2"
       is-extendable "^1.0.1"
   
-  mkdirp@0.5.1, mkdirp@0.x, mkdirp@^0.5.0, mkdirp@^0.5.1:
+  mkdirp@0.5.1, mkdirp@0.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
     version "0.5.1"
     resolved "http://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
     dependencies:
@@ -3956,6 +3965,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
     dependencies:
       find-up "^2.1.0"
+  
+  plotly@^1.0.6:
+    version "1.0.6"
+    resolved "https://registry.yarnpkg.com/plotly/-/plotly-1.0.6.tgz#b2672c3df88333625bdf684982d0e3f6521d7aaa"
+    integrity sha1-smcsPfiDM2Jb32hJgtDj9lIdeqo=
+    dependencies:
+      mkdirp "~0.5.0"
   
   pluralize@^7.0.0:
     version "7.0.0"

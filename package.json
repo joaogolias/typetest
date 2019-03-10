@@ -19,6 +19,7 @@
     "firebase-admin": "^6.1.0",
     "jest": "^23.6.0",
     "nodemailer": "^5.1.1",
+    "plotly": "^1.0.6",
     "puppeteer": "^1.13.0",
     "soap": "^0.25.0",
     "ts-jest": "^23.10.4",
