@@ -27,6 +27,11 @@ const timeout = setTimeout(TimeoutCallback, 100)
 
 sleep(5000)
 
+const user = {
+    name: "favela",
+    college: "poli",
+    dps: ['sd2', 'cir2']
+};
 
 
 

@@ -2,7 +2,6 @@ import * as parser from 'csv-parse'
 import * as nodemailer from 'nodemailer'
 import * as firebase from 'firebase'
 import * as admin from 'firebase-admin'
-import * as readline from 'readline'
 import fs = require('fs')
 
 const rightDirName = __dirname.replace("build/", "")
