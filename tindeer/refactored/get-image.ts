@@ -18,7 +18,7 @@ class PuppeteerManager {
     
         let i = 0;
         let count = 0;
-        const arrayOfLinks = FileManager.readJson('images.json');
+        const arrayOfLinks = FileManager.readJson('images.json') as any[]
         
         while (i < quantity) {
             try {
@@ -53,7 +53,7 @@ class PuppeteerManager {
                         await FileManager.writeFile(arrayOfLinks, './images.json');
                     }
                 }
-                // TimeManager.sleep(500);
+                count++
             } catch (err) {
                 console.log('Err in Puppeteer: ', err)
                 if(err.message.toLowerCase().indexOf('timeout') !== -1) {
@@ -61,6 +61,8 @@ class PuppeteerManager {
                 } else if(err.message.indexOf('failed to find element matching') !== -1) {
                     throw new Error('matching'); 
                 }
+
+                PromptManager.loadingColorfulLog(`We've found ${count} imagens but only ${i} `, PromptColor.BLUE)
                 this.browser.close();
                 break;
             }
@@ -112,7 +114,6 @@ async function GetImageMain() {
             console.log('\n')
             const loading = PromptManager.loadingColorfulLog('Restarting', PromptColor.BLUE)
             console.log('\n')
-            TimeManager.sleep(5000)
             PromptManager.stopLoading(loading);
             const finishedDate = new Date().getTime();
                         PromptManager.printColorfulLog(`Taken time: ${TimeManager.pretiffyTime(finishedDate - date)} to add ${arrayOfLinks.length - initialLength} `, PromptColor.BLUE)
