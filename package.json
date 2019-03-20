@@ -11,6 +11,7 @@
     "@types/nodemailer": "^4.6.6",
     "@types/puppeteer": "^1.12.2",
     "@types/uuid": "^3.4.4",
+    "axios": "^0.18.0",
     "csv-parse": "^4.3.3",
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",

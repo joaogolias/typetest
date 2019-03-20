@@ -4,6 +4,7 @@ function jenGenerator(quantity) {
     let i = 0
     const machArr = []
     const profArr = []
+    const startDate = new Date().getTime()
     while(i<quantity) {
         const id = uuid.v4().replace(/-/g, '')
         const _id = id
@@ -18,15 +19,14 @@ function jenGenerator(quantity) {
         machArr.push(generateMatch(_id, birth_date, name, school, photos, gender, ping_time))
         i++
     }
+    const endDate = new Date().getTime()
+    console.log(pretiffyTime(endDate - startDate))
     fs.writeFile('./profiles.json', JSON.stringify(profArr), (err) => {
         if (err) console.log(err)
     })
     fs.writeFile('./matches.json', JSON.stringify(machArr), (err) => {
         if (err) console.log(err)
     })
-    // console.log(profArr)
-    // console.log("\n\n\n\n\n")
-    // console.log(machArr)
 }
 
 function generateProfile(_id, birth_date, name, school, photos, gender, ping_time) {
@@ -268,7 +268,31 @@ function generatePhotoUrl() {
     const filteredImages = images.filter((obj) => obj.selected === false);
     const seletectedObject = filteredImages[Math.floor(Math.random()*(filteredImages.length-1))]
     seletectedObject.selected = true;
+    if(filteredImages.length <= 1) restartArray(images)
     return seletectedObject.link;
+}
+
+function pretiffyTime(miliseconds) {
+    let seconds = miliseconds/1000
+    let minutes = seconds/60
+    let hours = minutes/60
+    let days = minutes/24
+
+    if(days > 1) {
+        return `${days.toFixed(2)} dias`
+    } else if (hours > 1) {
+        return `${hours.toFixed(2)}h`
+    } else if (minutes > 1) {
+        return `${minutes.toFixed(2)}min` 
+    } else if (seconds > 1) {
+        return `${seconds.toFixed(2)}s`
+    } else {
+        return `${miliseconds.toFixed(2)}ms`
+    }
+}
+
+function restartArray(array) {
+    array.forEach((obj) => obj.selected = false);
 }
 
 function randomBoolean() {
@@ -276,4 +300,4 @@ function randomBoolean() {
     // return true
 }
 
-jenGenerator(3000)
+jenGenerator(30000)
